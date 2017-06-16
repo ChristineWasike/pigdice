@@ -9,20 +9,22 @@
 
 
 // pick a random number btn 1 and 6 for the roll of the die
-
+var die = (Math.random()*6)+ 1;
 
 // create a var that collects the random number
-
+var dieNumber = Math.floor(die);
 
 // set the score after a single roll
 
+var score = die;
 
-
-
-
-
-
-
+// if statement if the number is 1
+var rollDice = function (die) {
+  if (die === 1) {
+    // return the score 0
+    return "score is 0"
+  }
+}
 
 
 
@@ -32,9 +34,7 @@
 
 // USER INETERFACE LOGIC
 
-// if statement if the number is 1
 
-// return the score 0
 
 
 // skip to next player
