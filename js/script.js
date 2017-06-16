@@ -1,9 +1,22 @@
 // BUSINESS LOGIC
 // create a player 1 object
+function firstPlayer(name, score, wins) {
+  this.name = name;
+  this.score = score;
+  this.wins = wins;
+
+};
 
 
 
 // create a player 2 object
+function secondPlayer(name, score, wins) {
+  this.name = name;
+  this.score = score;
+  this.wins = wins;
+};
+
+var playerOne = new firstPlayer()
 
 
 
@@ -16,13 +29,16 @@ var dieNumber = Math.floor(die);
 
 // set the score after a single roll
 
-var score = die;
+var score = parseInt("");
 
 // if statement if the number is 1
-var rollDice = function (die) {
+var rollDice = function (dieNumber) {
   if (die === 1) {
     // return the score 0
-    return "score is 0"
+    return score === 0;
+    console.log(rollDice);
+  }else {
+    return score === dieNumber;
   }
 }
 

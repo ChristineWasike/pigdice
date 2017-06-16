@@ -5,6 +5,8 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Hind|Playfair+Display" rel="stylesheet">
+
   <meta charset="utf-8">
   <title>Pig Dice</title>
 </head>
@@ -25,19 +27,31 @@
     </div>
 
   </section>
+  
+<!-- RULES OF THE GAME -->
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h3></h3>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
   <div class="container fluid">
     <div class="row">
       <div class="col-md-6">
         <section>
 
           <!-- player one's name -->
-          <h2 id="playerName1"></h2>
+          <h4 id="playerName1"></h4>
           <form id="">
             <label for="PLAYER1">NAME</label>
             <input type="text" class="form-control" placeholder="Enter name here" id="name1">
 
             <!-- player 1's button -->
-
             <button type="submit" name="button">Press me</button>
 
           </form>
@@ -53,11 +67,17 @@
       <div class="col-md-6">
         <section>
           <!-- player two's name -->
-          <h2>Player Two</h2>
-          <input type="text" name="button" value="">
+          <h4 id="playerName2"></h4>
+          <form id="">
+            <label for="PLAYER1">NAME</label>
+            <input type="text" class="form-control" placeholder="Enter name here" id="name2">
 
-          <!-- player 2's button -->
-          <button type="submit" name="button" value="">Press me</button>
+            <!-- player 2's button -->
+            <button type="submit" name="button">Press me</button>
+
+          </form>
+
+
 
           <ul id="player2">
             <!-- display score here -->
