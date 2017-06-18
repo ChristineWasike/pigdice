@@ -1,44 +1,40 @@
 // BUSINESS LOGIC
 // create a player 1 object
-function firstPlayer(name, score, wins) {
-  this.name = name;
-  this.score = score;
-  this.wins = wins;
-
-};
-
-
-
 // create a player 2 object
-function secondPlayer(name, score, wins) {
+function Player(name, score, wins) {
   this.name = name;
   this.score = score;
   this.wins = wins;
+
 };
 
-var playerOne = new firstPlayer()
+var playerOne = new Player();
+var playerTwo = new Player();
+
+
+
+function Game(currentScore, finalScore) {
+  this.currentScore = currentScore
+  this.finalScore = finalScore
+}
 
 
 
 
 // pick a random number btn 1 and 6 for the roll of the die
-var die = (Math.random()*6)+ 1;
-
 // create a var that collects the random number
-var dieNumber = Math.floor(die);
-
 // set the score after a single roll
+var die = Math.floor((Math.random()*6)+ 1) ;
 
-var score = parseInt("");
 
 // if statement if the number is 1
-var rollDice = function (dieNumber) {
+var rollDice = function (die) {
   if (die === 1) {
     // return the score 0
-    return score === 0;
-    console.log(rollDice);
+
+
   }else {
-    return score === dieNumber;
+  score += die;
   }
 }
 
@@ -49,6 +45,14 @@ var rollDice = function (dieNumber) {
 
 
 // USER INETERFACE LOGIC
+
+
+$(document).ready(function () {
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+
 
 
 

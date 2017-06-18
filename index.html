@@ -2,24 +2,23 @@
 <html>
 
 <head>
+  <link rel="shortcut icon" href="img/piggy.ico">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Hind|Playfair+Display" rel="stylesheet">
-
   <meta charset="utf-8">
-  <title>Pig Dice</title>
+  <title>pigDice</title>
 </head>
 
 <body>
-
   <!-- heading Pigdice -->
-  <section>
+  <section id="header">
     <div class="container fluid">
-      <div class="row">
+      <div class="row" id="flip">
         <div class="col-md-12">
           <h1>Pig Dice</h1>
-
+          <h4>Click to slide down</h4>
         </div>
 
       </div>
@@ -27,74 +26,72 @@
     </div>
 
   </section>
-  
-<!-- RULES OF THE GAME -->
-  <section>
+  <!-- RULES OF THE GAME -->
+  <section id="manual">
     <div class="container-fluid">
-      <div class="row">
+      <div class="row" id="panel">
         <div class="col-md-12">
-          <h3></h3>
+          <h3>Game Manual</h3>
+          <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold"
+
+            <br>If the player rolls a 1, they score nothing and it becomes the next player's turn.
+            <br>If the player rolls any other number, it is added to their turn total and the player's turn continues.
+            <br>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
+            <br> The first player to score 100 or more points wins</p>
+
         </div>
 
       </div>
 
     </div>
   </section>
-  <div class="container fluid">
-    <div class="row">
-      <div class="col-md-6">
-        <section>
 
-          <!-- player one's name -->
-          <h4 id="playerName1"></h4>
-          <form id="">
-            <label for="PLAYER1">NAME</label>
-            <input type="text" class="form-control" placeholder="Enter name here" id="name1">
-
-            <!-- player 1's button -->
-            <button type="submit" name="button">Press me</button>
-
-          </form>
-
-
-          <ul id="player1">
-            <!-- display score here -->
-          </ul>
-        </section>
-
-      </div>
-
-      <div class="col-md-6">
-        <section>
-          <!-- player two's name -->
-          <h4 id="playerName2"></h4>
-          <form id="">
-            <label for="PLAYER1">NAME</label>
-            <input type="text" class="form-control" placeholder="Enter name here" id="name2">
-
-            <!-- player 2's button -->
-            <button type="submit" name="button">Press me</button>
-
-          </form>
-
-
-
-          <ul id="player2">
-            <!-- display score here -->
-          </ul>
-        </section>
-
-      </div>
-
-
+  <div class="row">
+    <div class="col-md-4">
+      <!-- BOTH PLAYERS TYPE IN THEIR NAMES HERE  -->
+      <form class="" playerNames>
+        <div class="form-group">
+          <label>First Player</label>
+          <input class="form-control" id="name1" placeholder="Name of player one" required="true">
+        </div>
+        <div class="form-group">
+          <label>Second Player</label>
+          <input class="form-control" id="name2" placeholder="Name of player one" required="true">
+        </div>
+        <button type="submit" class="btn btn-lg btn-success">ENTER</button>
+      </form>
     </div>
 
+    <div class="col-md-4">
+      <!-- PLAYER ONE PLAYS -->
+      <h2 id="player1"></h2>
+      <h4>DIE ROLLS : </h4>
+      <h4 id="temptotalA">ROUND'S TOTAL :</h4>
+      <!-- player 1's button -->
+      <button type="submit" name="button" class="btn" id="button1a">Roll Dice</button>
+      <button type="submit" name="button" class="btn" id="button1b">Pass Turn</button>
+    </div>
+
+    <div class="col-md-4">
+      <!-- PLAYER TWO PLAYS -->
+      <h2 id="player2"></h2>
+      <h4>DIE ROLLS : </h4>
+      <h4 id="temptotalB">ROUND'S TOTAL :</h4>
+      <!-- player 1's button -->
+      <button type="submit" name="button" class="btn" id="button2a">Roll Dice</button>
+      <button type="submit" name="button" class="btn" id="button2b">Pass Turn</button>
+    </div>
   </div>
-
-
-
+  <div class="container">
+    <div class="row" id="">
+      <div class="col-md-4">
+        <h1>SCORE FINALE</h1>
+      </div>
+    </div>
+  </div>
   <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
   <script src="js/script.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
 </body>
 
 </html>
